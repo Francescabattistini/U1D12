@@ -2,12 +2,11 @@
        Scrivi una funzione per cambiare il titolo della pagina in qualcos'altro
     */
 
-const changeTitle = function (nuovoTitolo) {
-  const h1 = document.querySelector("h1");
-  h1.innerText = nuovoTitolo;
+const changeTitle = function (stringa) {
+  const titolo = document.querySelector("div > h1");
+  titolo.innerText = stringa;
 };
-changeTitle("Benvenuti");
-
+console.log(changeTitle("Benvenuto"));
 /* ESERCIZIO 2
        Scrivi una funzione per aggiungere al titolo della pagina una classe "myHeading"
     */
@@ -24,13 +23,24 @@ addClassToTitle();
        Scrivi una funzione che cambi il testo dei p figli di un div
       */
 
-const changePcontent = function () {};
+const changePcontent = function (stringa) {
+  const frase = document.querySelectorAll("div > p");
+  for (let index = 0; index < frase.length; index++) {
+    const element = frase[index];
+    element.innerText = stringa;
+  }
+};
+changePcontent("nuovo testo ABC");
 
 /* ESERCIZIO 4
        Scrivi una funzione che cambi la proprietà href di ogni link (tranne quello nel footer) con il valore https://www.google.com
       */
 
-const changeUrls = function () {};
+const changeUrls = function (stringa) {
+  const url = document.querySelector("div > a");
+  url.setAttribute("href", stringa);
+};
+changeUrls("https://www.google.com");
 
 /* ESERCIZIO 5
        Scrivi una funzione che aggiunga un nuovo elemento lista alla seconda lista non ordinata
