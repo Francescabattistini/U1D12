@@ -37,7 +37,7 @@ changePcontent("nuovo testo ABC");
       */
 
 const changeUrls = function (stringa) {
-  const url = document.querySelector("div > a");
+  const url = document.querySelectorAll("div > a");
   url.setAttribute("href", stringa);
 };
 changeUrls("https://www.google.com");
@@ -46,7 +46,9 @@ changeUrls("https://www.google.com");
        Scrivi una funzione che aggiunga un nuovo elemento lista alla seconda lista non ordinata
     */
 
-const addToTheSecond = function () {};
+const addToTheSecond = function (stringa) {
+    const newList
+};
 
 /* ESERCIZIO 6
        Scrivi una funzione che aggiunga un paragrafo al primo div
